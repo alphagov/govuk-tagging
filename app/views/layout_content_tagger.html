@@ -1,0 +1,90 @@
+{#
+  environment_style = GovukAdminTemplate.environment_style
+  environment_label = GovukAdminTemplate.environment_label
+  app_home_path = content_for?(:app_home_path) ? yield(:app_home_path) : root_path
+  app_title = content_for?(:app_title) ? yield(:app_title) : GovukAdminTemplate.Config.app_title
+  has_navbar_content = GovukAdminTemplate.Config.show_signout || content_for?(:navbar_right) || content_for?(:navbar_items)
+#}
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="no-js lte-ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{% block page_title %}{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>(function(d){d.className=d.className.replace(/^no-js\b/,'js');}(document.documentElement));</script>
+
+    {% include "includes/scripts.html" %}
+    {% block head %}{% endblock %}
+    {#
+      # HTML5 and bootstrap shims, for <= IE8 support of HTML5 elements
+      # respond.js must come after CSS (from :head) and media queries so
+      # that rules and styles can be correctly calculated.
+    #}
+
+  </head>
+  <body{% if environment_style %} class="environment-{{ environment_style }}"{% endif %}>
+    {% block body_start %}{% endblock %}
+    {% block navbar %}
+      <header class="
+        navbar
+        navbar-default
+        navbar-inverse
+        navbar-static-top
+        {% if environment_style %}environment-indicator{% endif %}
+        add-bottom-margin" role="banner">
+        <div class="navbar-container container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-toggle" data-toggle="collapse" data-target="header .navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="/">Content tagger</a>
+          <div class="environment-label">
+            Development
+          </div>
+      </div>
+      <nav role="navigation" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Edit a page</a></li>
+          <li><a href="/">Bulk tag</a></li>
+          <li><a href="/">Edit taxonomy</a></li>
+          <li><a href="/">Analytics</a></li>
+          <li><a href="/projects" class="active">Projects</a></li>
+        </ul>
+        <div class="navbar-text pull-right remove-bottom-margin">
+          <ul class="list-inline">
+            <li>
+              <a id="#user_settings" href="/">Jemima</a>
+            </li>
+            <li>
+              <a href="/auth/gds/sign_out">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+    {% endblock %}
+    <section class="container">
+      <main role="main">
+        {% if GovukAdminTemplate.Config.show_flash %}
+          {{ display_flash_message }}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+      </main>
+      <footer class="page-footer">
+        {% block footer_top %}{% endblock %}
+        {% block copyright %}
+        <a class="inherit" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">&copy; Crown Copyright</a>
+        {% endblock %}
+      </footer>
+    </section>
+    {% block body_end %}{% endblock %}
+  </body>
+</html>

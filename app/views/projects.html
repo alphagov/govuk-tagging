@@ -1,0 +1,101 @@
+{% extends "layout_content_tagger.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<header class="heading-with-actions">
+  <ol class="breadcrumb">
+    <li><a href="/projects">Projects</a></li>
+    <li class="active">Test Project</li>
+  </ol>
+
+  <h1>Test Project</h1>
+
+    <nav class="btn-group">
+
+    </nav>
+</header>
+
+<div class="row tagathon-project">
+  <div class="col-md-3 filter-controls">
+    <h3>Filter</h3>
+
+    <form method="GET">
+      <input id="project-tagging-content-item-search" type="text" class="form-control js-bulk-tagging-search-filter" name="query" value="" placeholder="Filter by title...">
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_tagged" value="tagged">
+            Tagged
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_not_tagged" value="not_tagged">
+            Not Tagged
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_all" value="all" checked="">
+            All
+          </label>
+        </div>
+      <button class="btn btn-lg btn-default" type="submit">Apply</button>
+    </form>
+  </div>
+
+  <div class="col-md-9">
+
+    <div class="content-list">
+      <div class="content-item">
+        <form data-ref="6" class="simple_form" id="edit_project_content_item_6" action="/projects/1/project_content_items/6" method="post">
+          <p><a href="https://www.gov.uk/call-charges">Call charges and phone numbers</a></p>
+          <p class="description">Call costs for 0800, 0808, 0845, 0870, 03 and other phone numbers from UK landlines and mobiles</p>
+
+          <a class="btn btn-primary" href="#" role="button">Tag item</a> <a class="btn btn-default" href="#" role="button">Skip item</a>
+        </form>
+
+        <div class="add-tag">
+          <div class="tag-explorer">
+            <div class="wrapper clearfix">
+              <div class="tag-explorer-column">
+                <div class="list-group">
+                  {% for topic in topics.child_taxons %}
+                  <a class="list-group-item" href="https://www.gov.uk/{{ topic.base_path }}" data-content-id="{{topic.content_id}}"><span class="name">{{topic.name}}</span>{% if topic.child_taxons.length > 0 %} <span class="glyphicon glyphicon-chevron-right pull-right"></span>{% endif %}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tag-actions">
+            <p>Tag to: <span class="tag-path"></span></p>
+
+            <button class="btn btn-primary">Add tag</button>
+            <button class="btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-item">
+        <form data-ref="7" class="simple_form" id="edit_project_content_item_7" action="/projects/1/project_content_items/7" method="post">
+          <p><a href="https://www.gov.uk/apply-renew-passport">Apply online for a UK passport</a></p>
+          <p class="description">You can apply for, update, renew or replace a passport online</p>
+
+          <a class="btn btn-primary" href="#" role="button">Tag item</a> <a class="btn btn-default" href="#" role="button">Skip item</a>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

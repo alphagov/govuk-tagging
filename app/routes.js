@@ -257,4 +257,12 @@ router.get('/topics-2-add', function(req,res){
 
 });
 
+router.get('/projects', function (req, res) {
+  var topics = require(__dirname+'/assets/javascripts/edu.json');
+  // console.log(JSON.stringify(topics, null, "  "))
+  console.log(topics.name)
+
+  res.render('projects', {topics: topics});
+})
+
 module.exports = router;

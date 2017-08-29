@@ -1,0 +1,32 @@
+.tag-explorer {
+  width: 100%;
+  height: 300px;
+  overflow-x: scroll;
+
+  border: 1px solid #ccc;
+
+  .tag-explorer-column {
+    float: left;
+    width: 240px;
+    height: 300px;
+    overflow-y: scroll;
+
+    background-color: #aaa;
+
+    .parent {
+      background-color: #ccc;
+    }
+
+    .list-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tag-actions {
+  margin-top: 10px;
+}
+
+.tag-path {
+  font-weight: bold;
+}
