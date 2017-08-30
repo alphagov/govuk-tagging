@@ -59,8 +59,8 @@ $(document).ready(function() {
     $tagActions.find('.tag-path').text(tagPath.join(" > "))
   })
 
-  // hide tag-actions
-  $('.tag-actions').addClass('js-hidden')
+  // hide current-tags
+  $('.current-tags').addClass('js-hidden')
 
   // set up tag actions
   $('.tag-actions').find('.js-cancel').on('click', function(e) {
@@ -85,7 +85,18 @@ $(document).ready(function() {
 
     var $currentTags = $contentItem.find('.current-tags')
     var $currentTagsList = $currentTags.find('ul')
-    $currentTagsList.append(tag)
+
+    $currentTags.removeClass('js-hidden')
+
+    // check tag doesn't exist
+    var tagExists = false
+    $currentTagsList.find('li').each(function(i, el) {
+      if ($(this).data('contentId') === tagId) {
+        tagExists = true
+      }
+    });
+
+    if (!tagExists) $currentTagsList.append(tag)
   })
 
   // remove tag
