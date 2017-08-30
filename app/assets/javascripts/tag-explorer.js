@@ -5,6 +5,15 @@ $(document).ready(function() {
     taxonomy = data;
   });
 
+  // hide tag explorer
+  $('.add-tag').addClass('js-hidden')
+
+  // set up tagging buttons
+  $('.js-tag-item').on('click', function(e) {
+    $(this).parents('.content-item').find('.add-tag').removeClass('js-hidden');
+  })
+
+  // set up tag explorer
   $(document).on('click', '.tag-explorer a', function(e){
     e.preventDefault()
 
@@ -43,6 +52,7 @@ $(document).ready(function() {
     }
 
     var $tagActions = $addTag.find('.tag-actions')
+    $tagActions.removeClass('js-hidden')
     var tagPath = [];
     $tagExplorer.find('.parent').each(function() { tagPath.push($(this).text()) })
     tagPath.push($tagExplorer.find('.active').text());
