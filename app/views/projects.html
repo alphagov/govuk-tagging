@@ -55,9 +55,10 @@
   <div class="col-md-9">
 
     <div class="content-list">
+      {% for content_item in content_items %}
       <div class="content-item">
-        <h2><a href="https://www.gov.uk/call-charges">Call charges and phone numbers</a></h2>
-        <p class="description">Call costs for 0800, 0808, 0845, 0870, 03 and other phone numbers from UK landlines and mobiles</p>
+        <h2><a href="{{ content_item.url }}">{{ content_item.title }}</a></h2>
+        <p class="description">{{ content_item.description }}</p>
 
         <div class="current-tags">
           <h3>Current tags:</h3>
@@ -97,6 +98,7 @@
           </div>
         </div>
       </div>
+      {% endfor %}
 
   </div>
 </div>

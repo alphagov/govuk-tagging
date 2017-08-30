@@ -258,11 +258,10 @@ router.get('/topics-2-add', function(req,res){
 });
 
 router.get('/projects', function (req, res) {
+  var content_items = require(__dirname+'/data/transport-content.json');
   var topics = require(__dirname+'/assets/javascripts/edu.json');
-  // console.log(JSON.stringify(topics, null, "  "))
-  console.log(topics.name)
 
-  res.render('projects', {topics: topics});
+  res.render('projects', {topics: topics, content_items: content_items});
 })
 
 module.exports = router;
