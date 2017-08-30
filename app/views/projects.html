@@ -56,12 +56,25 @@
 
     <div class="content-list">
       <div class="content-item">
-        <form data-ref="6" class="simple_form" id="edit_project_content_item_6" action="/projects/1/project_content_items/6" method="post">
-          <p><a href="https://www.gov.uk/call-charges">Call charges and phone numbers</a></p>
-          <p class="description">Call costs for 0800, 0808, 0845, 0870, 03 and other phone numbers from UK landlines and mobiles</p>
+        <h2><a href="https://www.gov.uk/call-charges">Call charges and phone numbers</a></h2>
+        <p class="description">Call costs for 0800, 0808, 0845, 0870, 03 and other phone numbers from UK landlines and mobiles</p>
 
-          <a class="btn btn-primary" href="#" role="button">Tag item</a> <a class="btn btn-default" href="#" role="button">Skip item</a>
-        </form>
+        <div class="current-tags">
+          <h3>Current tags:</h3>
+          <span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width:100%;">
+            <span class="selection">
+              <span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                <ul class="select2-selection__rendered">
+                </ul>
+              </span>
+            </span>
+          </span>
+        </div>
+
+        <div class="content-item-actions">
+          <button class="btn btn-primary js-tag-item" role="button">Tag item</button>
+          <button class="btn btn-default js-skip-item" role="button">Skip item</button>
+        </div>
 
         <div class="add-tag">
           <div class="tag-explorer">
@@ -79,21 +92,11 @@
           <div class="tag-actions">
             <p>Tag to: <span class="tag-path"></span></p>
 
-            <button class="btn btn-primary">Add tag</button>
-            <button class="btn">Cancel</button>
+            <button class="btn btn-primary js-add-tag">Add tag</button>
+            <button class="btn js-cancel">Cancel</button>
           </div>
         </div>
       </div>
-
-      <div class="content-item">
-        <form data-ref="7" class="simple_form" id="edit_project_content_item_7" action="/projects/1/project_content_items/7" method="post">
-          <p><a href="https://www.gov.uk/apply-renew-passport">Apply online for a UK passport</a></p>
-          <p class="description">You can apply for, update, renew or replace a passport online</p>
-
-          <a class="btn btn-primary" href="#" role="button">Tag item</a> <a class="btn btn-default" href="#" role="button">Skip item</a>
-        </form>
-      </div>
-    </div>
 
   </div>
 </div>

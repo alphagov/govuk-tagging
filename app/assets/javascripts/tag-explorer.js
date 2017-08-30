@@ -57,7 +57,35 @@ $(document).ready(function() {
     $tagExplorer.find('.parent').each(function() { tagPath.push($(this).text()) })
     tagPath.push($tagExplorer.find('.active').text());
     $tagActions.find('.tag-path').text(tagPath.join(" > "))
+  })
 
+  // hide tag-actions
+  $('.tag-actions').addClass('js-hidden')
+
+  // set up tag actions
+  $('.tag-actions').find('.js-cancel').on('click', function(e) {
+    $(this).parents('.add-tag').addClass('js-hidden')
+  })
+
+  $('.tag-actions').find('.js-add-tag').on('click', function(e) {
+    var $this = $(this)
+
+    var $contentItem = $this.parents('.content-item')
+    var $addTag = $this.parents('.add-tag')
+    var $tagExplorer = $addTag.find('.tag-explorer')
+
+    // get tag name & id
+    var $activeTag = $tagExplorer.find('.active')
+    var tagName = $activeTag.text()
+    var tagId = $activeTag.data('contentId')
+
+    // build tag
+    var tag = '<li class="select2-selection__choice" title="'+tagName+'" data-content-id="'+tagId+'">'
+    tag += '<span class="select2-selection__choice__remove" role="presentation">×</span>'+tagName+'</li>'
+
+    var $currentTags = $contentItem.find('.current-tags')
+    var $currentTagsList = $currentTags.find('ul')
+    $currentTagsList.append(tag)
   })
 
   function findObjectById(obj, id) {
