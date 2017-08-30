@@ -88,6 +88,11 @@ $(document).ready(function() {
     $currentTagsList.append(tag)
   })
 
+  // remove tag
+  $(document).on('click', '.current-tags .select2-selection__choice__remove', function(e) {
+    $(this).parents('li').remove()
+  })
+
   function findObjectById(obj, id) {
     if(obj.content_id === id) { return obj; }
     for(var i=0; i<obj.child_taxons.length; i++) {
