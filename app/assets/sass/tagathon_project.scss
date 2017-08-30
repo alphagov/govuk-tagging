@@ -16,11 +16,18 @@
   }
 
   .content-list {
-    form {
+    .content-item {
       margin: 20px 0;
-      padding: 20px 40px 20px 0;
       border: 1px solid #ccc;
       border-width:1px 0 0 0;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
 
       p {
         font-size: 1.2em;
@@ -33,6 +40,14 @@
 
       .project_content_item_taxons {
         margin: 20px 0;
+      }
+
+      .content-item-actions {
+        margin-bottom: 10px;
+      }
+
+      .current-tags {
+        margin-bottom: 10px;
       }
 
       &.error-saving {
