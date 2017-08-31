@@ -92,9 +92,9 @@
                   "child_taxons": []
                 },
                 {
-                  "name": "Motorcylce theory tests",
+                  "name": "Motorcycle theory tests",
                   "content_id": "89f1faf53492cdc922a45efa943636f0",
-                  "base_path": "/taxonomy/motorcylce-theory-tests",
+                  "base_path": "/taxonomy/motorcycle-theory-tests",
                   "child_taxons": []
                 },
                 {
@@ -154,9 +154,9 @@
                   "child_taxons": []
                 },
                 {
-                  "name": "During a motorcyle riding test",
+                  "name": "During a motorcycle riding test",
                   "content_id": "da5c6e1450437a33b8abfebcf7347339",
-                  "base_path": "/taxonomy/during-a-motorcyle-riding-test",
+                  "base_path": "/taxonomy/during-a-motorcycle-riding-test",
                   "child_taxons": []
                 },
                 {
@@ -260,13 +260,13 @@
               "child_taxons": []
             },
             {
-              "name": "The highway code",
+              "name": "The Highway Code",
               "content_id": "48dd85fac97b5845390674aa8cf7cf90",
               "base_path": "/taxonomy/the-highway-code",
               "child_taxons": []
             },
             {
-              "name": "Dart charge and other toll charges",
+              "name": "Dart Charge and other toll charges",
               "content_id": "c783666a01969a7e2fdd962ae1a9a3a3",
               "base_path": "/taxonomy/dart-charge-and-other-toll-charges",
               "child_taxons": []
@@ -278,7 +278,7 @@
               "child_taxons": []
             },
             {
-              "name": "Fitness to drive assessments",
+              "name": "Fitness to Drive assessments",
               "content_id": "c05f532885a8f6327bc43cc7d73be09e",
               "base_path": "/taxonomy/fitness-to-drive-assessments",
               "child_taxons": []
@@ -341,12 +341,12 @@
           "child_taxons": []
         },
         {
-          "name": "Professional driving (lgv and hgv drivers)",
+          "name": "Professional driving (LGV and HGV drivers)",
           "content_id": "57d52c739c1241801f7476a1ee6aa3e1",
           "base_path": "/taxonomy/professional-driving-lgv-and-hgv-drivers",
           "child_taxons": [
             {
-              "name": "Cpc training",
+              "name": "CPC training",
               "content_id": "2c63dd8d954ed344783788722684acfd",
               "base_path": "/taxonomy/cpc-training",
               "child_taxons": []
@@ -364,7 +364,7 @@
               "child_taxons": []
             },
             {
-              "name": "Eu driving rules",
+              "name": "EU driving rules",
               "content_id": "9e3f004537581e386bf213588dd4474d",
               "base_path": "/taxonomy/eu-driving-rules",
               "child_taxons": []
@@ -383,7 +383,7 @@
               "child_taxons": []
             },
             {
-              "name": "Mot testing and maintenance businesses",
+              "name": "MOT testing and maintenance businesses",
               "content_id": "0a058d049d3ee89182f145e5da1ee608",
               "base_path": "/taxonomy/mot-testing-and-maintenance-businesses",
               "child_taxons": []
@@ -406,7 +406,7 @@
               "base_path": "/taxonomy/vehicle-operator-licences",
               "child_taxons": [
                 {
-                  "name": "Hgv and goods carriage vehicle licencing",
+                  "name": "HGV and goods carriage vehicle licencing",
                   "content_id": "81dfb06544a4f41f952c3437fb57fa09",
                   "base_path": "/taxonomy/hgv-and-goods-carriage-vehicle-licencing",
                   "child_taxons": []
@@ -439,7 +439,7 @@
               "child_taxons": []
             },
             {
-              "name": "Hgv standards and vehicle checks",
+              "name": "HGV standards and vehicle checks",
               "content_id": "6ee0449a581d7c0943cf362e32ae1f34",
               "base_path": "/taxonomy/hgv-standards-and-vehicle-checks",
               "child_taxons": []
@@ -469,7 +469,7 @@
               "child_taxons": []
             },
             {
-              "name": "Registering as an mot tester",
+              "name": "Registering as an MOT tester",
               "content_id": "c2978155b0bcd085216100523a8fa9bc",
               "base_path": "/taxonomy/registering-as-an-mot-tester",
               "child_taxons": []
@@ -494,30 +494,30 @@
               "child_taxons": []
             },
             {
-              "name": "Mots (car and motorcycle)",
+              "name": "MOTs (car and motorcycle)",
               "content_id": "8bf161cca556453e846f55de66acb30b",
               "base_path": "/taxonomy/mots-car-and-motorcycle",
               "child_taxons": [
                 {
-                  "name": "Getting an mot",
+                  "name": "Getting an MOT",
                   "content_id": "d668ddd7ca8f2c66c2f38965234158a0",
                   "base_path": "/taxonomy/getting-an-mot",
                   "child_taxons": []
                 },
                 {
-                  "name": "Mot certificate replacement",
+                  "name": "MOT certificate replacement",
                   "content_id": "47ca2384dcb70a2c20f374b394ec47fd",
                   "base_path": "/taxonomy/mot-certificate-replacement",
                   "child_taxons": []
                 },
                 {
-                  "name": "Mot complaints",
+                  "name": "MOT complaints",
                   "content_id": "1839e6ecd403f0befe40781b3073296e",
                   "base_path": "/taxonomy/mot-complaints",
                   "child_taxons": []
                 },
                 {
-                  "name": "Mot status of a vehicle",
+                  "name": "MOT status of a vehicle",
                   "content_id": "6061422bb0181b7213f154360d039c63",
                   "base_path": "/taxonomy/mot-status-of-a-vehicle",
                   "child_taxons": []
@@ -564,7 +564,7 @@
           "child_taxons": []
         },
         {
-          "name": "Dlr",
+          "name": "DLR",
           "content_id": "7778a57cafbb70bc8bd39060281be88d",
           "base_path": "/taxonomy/dlr",
           "child_taxons": []
@@ -679,91 +679,91 @@
           "base_path": "/taxonomy/hs2",
           "child_taxons": [
             {
-              "name": "Hs2 additional provisions",
+              "name": "HS2 additional provisions",
               "content_id": "b828ebd6de986ea25918fb8c31fb16ad",
               "base_path": "/taxonomy/hs2-additional-provisions",
               "child_taxons": []
             },
             {
-              "name": "Hs2 bidding",
+              "name": "HS2 bidding",
               "content_id": "7f595cfa229451631bd264b50f219977",
               "base_path": "/taxonomy/hs2-bidding",
               "child_taxons": []
             },
             {
-              "name": "Hs2 compensation for property affected",
+              "name": "HS2 compensation for property affected",
               "content_id": "0987c0c5a8df3b33769eb0c8cb148bd2",
               "base_path": "/taxonomy/hs2-compensation-for-property-affected",
               "child_taxons": []
             },
             {
-              "name": "Hs2 construction / engineering",
+              "name": "HS2 construction / engineering",
               "content_id": "58df22bcad869c663ec435d5f2bb588b",
               "base_path": "/taxonomy/hs2-construction--engineering",
               "child_taxons": []
             },
             {
-              "name": "Hs2 design",
+              "name": "HS2 design",
               "content_id": "3ec5a60e19b54eb183d0b29a6b03ba50",
               "base_path": "/taxonomy/hs2-design",
               "child_taxons": []
             },
             {
-              "name": "Hs2 economic case",
+              "name": "HS2 economic case",
               "content_id": "da6bead764957c25f0db474cd49b3089",
               "base_path": "/taxonomy/hs2-economic-case",
               "child_taxons": []
             },
             {
-              "name": "Hs2 environmental impact",
+              "name": "HS2 environmental impact",
               "content_id": "8cfa4fa22cebf1728e45728b42e87866",
               "base_path": "/taxonomy/hs2-environmental-impact",
               "child_taxons": []
             },
             {
-              "name": "Hs2 legislation",
+              "name": "HS2 legislation",
               "content_id": "4063166ac7ae486364dd5284e0ba0c9c",
               "base_path": "/taxonomy/hs2-legislation",
               "child_taxons": []
             },
             {
-              "name": "Hs2 phase one",
+              "name": "HS2 phase one",
               "content_id": "c210fe088ccc70c3a350b7b932236684",
               "base_path": "/taxonomy/hs2-phase-one",
               "child_taxons": []
             },
             {
-              "name": "Hs2 phase two",
+              "name": "HS2 phase two",
               "content_id": "803f57405f3a181b444812c25de5ef8c",
               "base_path": "/taxonomy/hs2-phase-two",
               "child_taxons": []
             },
             {
-              "name": "Hs2 planning (routes and maps)",
+              "name": "HS2 planning (routes and maps)",
               "content_id": "4f0bfda882cb6358fc27bd5b260e98d3",
               "base_path": "/taxonomy/hs2-planning-routes-and-maps",
               "child_taxons": []
             },
             {
-              "name": "Hs2 spend",
+              "name": "HS2 spend",
               "content_id": "98a20c31d670fa1338826c144e2dd9b1",
               "base_path": "/taxonomy/hs2-spend",
               "child_taxons": []
             },
             {
-              "name": "Hs2 stakeholder and community engagement",
+              "name": "HS2 stakeholder and community engagement",
               "content_id": "d1b716d73976ae85ca4611fcd781b2a4",
               "base_path": "/taxonomy/hs2-stakeholder-and-community-engagement",
               "child_taxons": []
             },
             {
-              "name": "Hs2 stations",
+              "name": "HS2 stations",
               "content_id": "d2f259357e1b3abe7e95e71e84db0863",
               "base_path": "/taxonomy/hs2-stations",
               "child_taxons": []
             },
             {
-              "name": "Hs2 strategic case",
+              "name": "HS2 strategic case",
               "content_id": "1b19ec325213213712ba41986dc70f5f",
               "base_path": "/taxonomy/hs2-strategic-case",
               "child_taxons": []
