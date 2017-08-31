@@ -257,9 +257,10 @@ router.get('/topics-2-add', function(req,res){
 
 });
 
-router.get('/projects', function (req, res) {
-  var content_items = require(__dirname+'/data/transport-content.json');
-  var topics = require(__dirname+'/assets/javascripts/edu.json');
+router.get('/projects/:branch', function (req, res) {
+  var branch = req.params.branch
+  var content_items = require(__dirname+'/data/'+branch+'-content.json');
+  var topics = require(__dirname+'/assets/javascripts/'+branch+'-taxonomy.json');
 
   res.render('projects', {topics: topics, content_items: content_items});
 })

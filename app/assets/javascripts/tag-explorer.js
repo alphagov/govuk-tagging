@@ -1,7 +1,8 @@
 var taxonomy = "";
+var branch = window.location.pathname.match(/\/projects\/(\w+)/)[1]
 
 $(document).ready(function() {
-  $.getJSON('/public/javascripts/edu.json', function(data) {
+  $.getJSON('/public/javascripts/'+branch+'-taxonomy.json', function(data) {
     taxonomy = data;
   });
 
