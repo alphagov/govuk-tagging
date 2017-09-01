@@ -1,0 +1,98 @@
+{% extends "layout_content_tagger.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<header class="heading-with-actions">
+  <ol class="breadcrumb">
+    <li><a href="/projects">Projects</a></li>
+    <li class="active">Test Project</li>
+  </ol>
+
+  <h1>Test Project</h1>
+
+    <nav class="btn-group">
+
+    </nav>
+</header>
+
+<div class="row tagathon-project">
+  <div class="col-md-3 filter-controls">
+    <h3>Filter</h3>
+
+    <form method="GET">
+      <input id="project-tagging-content-item-search" type="text" class="form-control js-bulk-tagging-search-filter" name="query" value="" placeholder="Filter by title...">
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_tagged" value="tagged">
+            Tagged
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_not_tagged" value="not_tagged">
+            Not Tagged
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="tagged_state" id="tagged_state_all" value="all" checked="">
+            All
+          </label>
+        </div>
+      <button class="btn btn-lg btn-default" type="submit">Apply</button>
+    </form>
+  </div>
+
+  <div class="col-md-9">
+
+    <div class="content-list">
+      {% for content_item in content_items %}
+      <div class="content-item">
+        <h2><a href="{{ content_item.url }}">{{ content_item.title }}</a></h2>
+        <p class="description">{{ content_item.description }}</p>
+
+        <div class="content-item-actions">
+          <button class="btn btn-primary js-tag-item" role="button">Tag item</button>
+          <button class="btn btn-default js-skip-item" role="button">Skip item</button>
+        </div>
+
+        <div class="add-tag" data-module="taxonomy-tree-checkboxes">
+          {% for topic in topics.child_taxons %}
+            <div class="topics topic-tree">
+              {{ topic_tree(topic) }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% macro topic_tree(topic) %}
+  <p>
+    <label>
+      <input type="checkbox" value="{{ topic.content_id }}">
+      <span>{{ topic.name }}</span>
+    </label>
+  </p>
+
+  {% if topic.child_taxons.length > 0 %}
+    <div class="topics topic-tree">
+      {% for child_topic in topic.child_taxons %}
+        {{ topic_tree(child_topic) }}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}

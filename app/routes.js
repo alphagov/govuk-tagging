@@ -265,4 +265,13 @@ router.get('/projects/:branch', function (req, res) {
   res.render('projects', {topics: topics, content_items: content_items});
 })
 
+router.get('/projects-tree/:branch', function (req, res) {
+  var branch = req.params.branch
+  var content_items = require(__dirname+'/data/'+branch+'-content.json');
+  var topics = require(__dirname+'/assets/javascripts/'+branch+'-taxonomy.json');
+
+  res.render('projects-tree', {topics: topics, content_items: content_items});
+})
+
+
 module.exports = router;
